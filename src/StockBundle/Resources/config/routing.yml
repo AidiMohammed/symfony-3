@@ -1,0 +1,8 @@
+stock_homepage:
+    path:     /stock/{id}/{year}/{title}.{ext}
+    defaults: { _controller: StockBundle:Default:index,ext: php }
+    requirements:
+        id: \d+
+        year: \d{4}
+        title: "[a-zA-Z]+"
+        ext: php|html
